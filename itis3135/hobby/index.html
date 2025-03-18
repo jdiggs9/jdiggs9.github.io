@@ -12,6 +12,7 @@
                 color: #faf6de;
                 margin: 0;
                 font-family: cursive;
+                
             }
             a {
                 color: #9aabc3;
@@ -89,70 +90,48 @@
                 text-align: center;
                 padding: 0.3em;
             }
-            /* .content {
-                display: none;
-                padding-bottom: 10px;
-            } */
-            /* .content.active {
-                display: block;
-            } */
+            .nav-link {
+
+                padding-bottom: 5px;
+            }
         </style>
         <script>
-            // document.querySelectorAll('.nav-link').forEach(link => {
-            //     link.addEventListener('click', function() {
-            //         document.querySelectorAll('.content').forEach(section => {
-            //             section.style.display = "none";
-            //         });
-            //         document.getElementById(this.dataset.target).style.display = "block";
-            //     });
-            // });
-            // function navFunction() {
-            //     var x = document.getElementById(this.dataset.target);
-            //     document.querySelectorAll('section.content').forEach(section => {
-            //             section.style.display = "none";
-            //         });
-            //     x.style.display = "block";
-            // };
+        document.addEventListener("DOMContentLoaded", function () {
+            const sections = document.querySelectorAll(".content");
+            const navLinks = document.querySelectorAll(".nav-link");
 
+            function showSection(targetId) {
+                sections.forEach(section => {
+                    section.style.display = section.id === targetId ? "block" : "none";
+                });
+            }
 
-            document.addEventListener("DOMContentLoaded", function () {
-        // Function to show the selected section
-        function showSection(targetId) {
-            document.querySelectorAll(".content").forEach(section => {
-                section.style.display = "none"; // Hide all sections
+            navLinks.forEach(link => {
+                link.addEventListener("click", function (event) {
+                    event.preventDefault(); 
+                    showSection(this.dataset.target);
+                });
             });
-            document.getElementById(targetId).style.display = "block"; // Show selected section
-        }
 
-        // Initially show only the first section
-        showSection("home");
-
-        // Add event listeners to navigation links
-        document.querySelectorAll(".nav-link").forEach(link => {
-            link.addEventListener("click", function (event) {
-                event.preventDefault(); // Prevent default anchor behavior
-                showSection(this.dataset.target);
-            });
+            showSection("what");
         });
-    });
         </script>
     </head>
     <body>
         <header>
             <h1>Reading the Cosmere </h1>
             <nav>
-                <a href="#" class="nav-link" data-target="what">What</a>
-                <a href="#" class="nav-link" data-target="why">Why</a>
-                <a href="#" class="nav-link" data-target="how">How</a>
-                <a href="#" class="nav-link" data-target="when">When</a>
-                <a href="#" class="nav-link" data-target="where">Where</a>
-                <a href="#" class="nav-link" data-target="who">Who</a>
-                <!-- <button onclick="navFunction()" data-target="what">What</button>
-                <button onclick="navFunction()" data-target="why">Why</button> -->
+                <a href="" class="nav-link" data-target="what">What</a>
+                <a href="" class="nav-link" data-target="why">Why</a>
+                <a href="" class="nav-link" data-target="how">How</a>
+                <a href="" class="nav-link" data-target="when">When</a>
+                <a href="" class="nav-link" data-target="where">Where</a>
+                <a href="" class="nav-link" data-target="who">Who</a>
+                <a href="" class="nav-link" data-target="ai">AI</a>
             </nav>
         </header>
         <main>
-            <section id="what" class="content active">
+            <section id="what" class="content">
                 <h2>What</h2>
                 <div class="divider"></div>
                 <div>
@@ -256,6 +235,16 @@
                                 <figcaption>Photo of my personal copy of the <i>Mistborn</i> boardgame, depicting Vin</figcaption>
                         </figure>
                     </div>
+                </div>
+            </section>
+            <section id="ai" class="content">
+                <h2>AI</h2>
+                <div class="divider"></div>
+                <div>
+                   <p>Here is a list of the prompts I used:</p>
+                    <ul>
+                        <li>I need a set of links that DO NOT leave the page, instead they show specific sections within the html page. When a link is clicked it should hide all other sections then display only the corresponding section. Use html, css, and js to accomplish the desired outcome. Here is an example of a section in the html page: "I included the 'what' section's code"</li>
+                    </ul>
                 </div>
             </section>
         </main>
