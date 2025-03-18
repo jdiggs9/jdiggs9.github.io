@@ -1,108 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta charset="UTF-8">
         <title>Hobby page</title>
+        <style type="text/css">
+            * {
+                box-sizing: border-box;
+            }
+            body {
+                background-color: #1e2939;
+                color: #faf6de;
+                margin: 0;
+                font-family: cursive;
+            }
+            a {
+                color: #9aabc3;
+            }
+            img {
+                max-width: 250px;
+                max-height: 150px;
+                border-radius: 20px;
+                margin-bottom: 0;
+                border: 1px solid #9aabc3;
+            }
+            section {
+                margin-top: 50px;
+                margin-left: 10%;
+				margin-right: 10%;
+                padding-top: 10px;
+                padding-left: 20px;
+                padding-right: 20px;
+                width: 80%;
+                background-color: #11223c;
+                border-radius: 10px;
+                border-top: 1px solid #9aabc3;
+                border-left: 1px solid #9aabc3;
+                border-bottom: 2px solid #5a626d;
+                border-right: 2px solid #5a626d;
+            }
+            header {
+                border-bottom: 3px solid #9aabc3;
+                background-color: #0a111c;
+                padding-top: 0.5px;
+                width: 100%;
+                margin-top: 0;
+                text-align: center;
+            }
+            footer {
+                margin-top: 70px;
+                border-top: 3px solid #9aabc3;
+                background-color: #0a111c;
+                width: 100%;
+                
+            }
+            .figGroup {
+                text-align: center;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+            }
+            .figStyle {
+                margin: auto;
+                padding: 20px;
+            }
+            figcaption {
+                margin: 0;
+                padding: 0;
+                max-width: 300px;
+                font-size: 11px;
+            }
+            h2 {
+                font-size: 26px;
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+            .divider {
+                border-top: 3px solid #9aabc3;
+                margin: 0;
+                margin-top: 10px;
+                padding: 0px;
+                margin-bottom: 10px;
+                border-radius: 10px;
+            }
+            p {
+                text-indent: 50px;
+            }
+            address {
+                text-align: center;
+                padding: 0.3em;
+            }
+            /* .content {
+                display: none;
+                padding-bottom: 10px;
+            } */
+            /* .content.active {
+                display: block;
+            } */
+        </style>
+        <script>
+            // document.querySelectorAll('.nav-link').forEach(link => {
+            //     link.addEventListener('click', function() {
+            //         document.querySelectorAll('.content').forEach(section => {
+            //             section.style.display = "none";
+            //         });
+            //         document.getElementById(this.dataset.target).style.display = "block";
+            //     });
+            // });
+            // function navFunction() {
+            //     var x = document.getElementById(this.dataset.target);
+            //     document.querySelectorAll('section.content').forEach(section => {
+            //             section.style.display = "none";
+            //         });
+            //     x.style.display = "block";
+            // };
+
+
+            document.addEventListener("DOMContentLoaded", function () {
+        // Function to show the selected section
+        function showSection(targetId) {
+            document.querySelectorAll(".content").forEach(section => {
+                section.style.display = "none"; // Hide all sections
+            });
+            document.getElementById(targetId).style.display = "block"; // Show selected section
+        }
+
+        // Initially show only the first section
+        showSection("home");
+
+        // Add event listeners to navigation links
+        document.querySelectorAll(".nav-link").forEach(link => {
+            link.addEventListener("click", function (event) {
+                event.preventDefault(); // Prevent default anchor behavior
+                showSection(this.dataset.target);
+            });
+        });
+    });
+        </script>
     </head>
     <body>
         <header>
             <h1>Reading the Cosmere </h1>
+            <nav>
+                <a href="#" class="nav-link" data-target="what">What</a>
+                <a href="#" class="nav-link" data-target="why">Why</a>
+                <a href="#" class="nav-link" data-target="how">How</a>
+                <a href="#" class="nav-link" data-target="when">When</a>
+                <a href="#" class="nav-link" data-target="where">Where</a>
+                <a href="#" class="nav-link" data-target="who">Who</a>
+                <!-- <button onclick="navFunction()" data-target="what">What</button>
+                <button onclick="navFunction()" data-target="why">Why</button> -->
+            </nav>
         </header>
         <main>
-            <section>
+            <section id="what" class="content active">
                 <h2>What</h2>
-                <div class="content">
-                   <p>The Cosmere is a popular collection of fantasy novels written by Brandon Sanderson. These include the Stormlight Archive series, the Mistborn series, 3 novellas, short stories, and 5 independent books, a total of 21 books. Each of these books is part of the same universe/cosmology; however, they each contain vastly different and unique stories that are amazing independently but also interconnect in amazing ways. The Cosmere can be thought of as the MCU of fantasy novels, but in my opinion, it's better. Personally, I have only read the Stormlight Archive and most of the Mistborn series, so most of the information on this page will be about those two series.</p>
-                   <p>Here is a quick introduction to the two main series within the Cosmere, Stormlight Archive and Mistborn, and don't worry, there are only light spoilers on the setup of the first books of the series. The Stormlight Archive is predominantly about 3 characters navigating their way through life on the planet Roshar, which is a fantastical world with swords that cut through souls, armor that makes you superhuman, warring nations, Spren (wisp/ghostly manifistations of emotion), and the Highstorm (a periodic hurrican the size of the continent that circles the globe). Mistborn is predominantly about 2 characters and their life on the dystopian planet of Scadrial, which has red skies, it rains ash, plants wither, the common people are treated as slaves to the nobility, and the Lord Ruler, an immortal demi-god, rules the world.</p>
-                   <figure>
-                        <img>
-                        <figcaption>Cosmere Logo from <a href = "https://brandon-sanderson.fandom.com/wiki/Cosmere">Cosmer wiki</a>, posted by DefinitelyAFriendlyDragon.</figcaption>
-                   </figure>
+                <div class="divider"></div>
+                <div>
+                   <p>The Cosmere is a popular collection of fantasy novels written by Brandon Sanderson. These include the <i>Stormlight Archive</i> series, the <i>Mistborn</i> series, 3 novellas, short stories, and 5 independent books, a total of 21 books. Each of these books is part of the same universe/cosmology; however, they each contain vastly different and unique stories that are amazing independently but also interconnect in amazing ways. The Cosmere can be thought of as the MCU of fantasy novels, but in my opinion, it's better. Personally, I have only read the <i>Stormlight Archive</i> and most of the <i>Mistborn</i> series, so most of the information on this page will be about those two series.</p>
+                   <p>Here is a quick introduction to the two main series within the Cosmere, <i>Stormlight Archive</i> and <i>Mistborn</i>, and don't worry, there are only light spoilers on the setup of the first books of the series. The <i>Stormlight Archive</i> is predominantly about 3 characters navigating their way through life on the planet Roshar, which is a fantastical world with swords that cut through souls, armor that makes you superhuman, warring nations, Spren (wisp/ghostly manifistations of emotion), and the Highstorm (a periodic hurrican the size of the continent that circles the globe). <i>Mistborn</i> is predominantly about 2 characters and their life on the dystopian planet of Scadrial, which has red skies, it rains ash, plants wither, the common people are treated as slaves to the nobility, and the Lord Ruler, an immortal demi-god, rules the world.</p>
+                   <div class="figGroup">
+                    <figure class="figStyle">
+                            <img src="images/What.png">
+                            <figcaption>Cosmere Logo from <a href = "https://brandon-sanderson.fandom.com/wiki/Cosmere">Cosmer wiki</a>, posted by DefinitelyAFriendlyDragon.</figcaption>
+                        </figure>
+                    </div>
                 </div>
             </section>
-            <section>
+            <section id="why" class="content">
                 <h2>Why</h2>
-                <div class="content">
-                   <p>You may be asking yourself, “Why should I read these books?” because these books (especially the Stormlight Archive) are some of, if not the best pieces of fiction I have ever consumed. They contain complex and intriguing stories, amazing action, the best-written worldbuilding/magic systems, the best-written characters and character developments, and so much more. In terms of genres, they cover a wide range, including fantasy, action, political conflict, underdogs, romance, heists, backstabing, revolution, revenge, and many more. These books are amazing and beloved by many, hints why he has sold over 40 million copies worldwide, I would recommend to at least check them out.</p>
-                   <figure>
-                        <img>
-                        <figcaption>Open source picture depicting a bestselling book, from <a href="https://www.shutterstock.com/search/best-selling-author">website</a></figcaption>
-                   </figure>
-                   <figure>
-                    <img>
-                    <figcaption>Open source picture depicting a lady contemplating, from <a href="https://www.istockphoto.com/photos/woman-questioning">website</a></figcaption>
-               </figure>
+                <div class="divider"></div>
+                <div>
+                   <p>You may be asking yourself, “Why should I read these books?” because these books (especially the <i>Stormlight Archive</i>) are some of, if not the best pieces of fiction I have ever consumed. They contain complex and intriguing stories, amazing action, the best-written worldbuilding/magic systems, the best-written characters and character developments, and so much more. In terms of genres, they cover a wide range, including fantasy, action, political conflict, underdogs, romance, heists, backstabing, revolution, revenge, and many more. These books are amazing and beloved by many, hints why he has sold over 40 million copies worldwide, I would recommend to at least check them out.</p>
+                   <div class="figGroup">
+                    <figure class="figStyle">
+                            <img src="images/Why1.png">
+                            <figcaption>Open source picture depicting a bestselling book, from <a href="https://www.shutterstock.com/search/best-selling-author">website</a></figcaption>
+                    </figure>
+                    <figure class="figStyle">
+                            <img src="images/Why2.png">
+                            <figcaption>Open source picture depicting a lady contemplating, from <a href="https://www.istockphoto.com/photos/woman-questioning">website</a></figcaption>
+                        </figure>
+                    </div>
                 </div>
             </section>
-            <section>
+            <section id="how" class="content">
                 <h2>How</h2>
-                <div class="content">
+                <div class="divider"></div>
+                <div>
                    <p>These books can be read through a variety of media, but primarily through physical books, ebooks, or audiobooks. The physical and ebooks can easily be ordered/bought through Amazon, DragonSteel books (Sanderson’s personal publisher), or other bookstore websites. The audiobooks, which I personally recommend, can easily be found on Audible. I recommend the audiobook version because it is convenient and it hosts talented voice actors that help bring the stories to life.</p>
-                   <figure>
-                        <img>
-                        <figcaption>Photo of my personal copy of The Way of Kings, first book of the Stormlight Archive</figcaption>
-                   </figure>
-                   <figure>
-                        <img>
-                        <figcaption>Screen shot from my audible library of The Final Empire, the first book of Mistborn</figcaption>
+                   <div class="figGroup">
+                    <figure class="figStyle">
+                            <img src="images/How1.png">
+                            <figcaption>Photo of my personal copy of <i>The Way of Kings</i>, first book of the <i>Stormlight Archive</i></figcaption>
                     </figure>
+                    <figure class="figStyle">
+                            <img src="images/How2.png">
+                            <figcaption>Screen shot from my audible library of The <i>Final Empire</i>, the first book of <i>Mistborn</i></figcaption>
+                        </figure>
+                    </div>
                 </div>
             </section>
-            <section>
+            <section id="when" class="content">
                 <h2>When</h2>
-                <div class="content">
-                   <p>These books can be read at any time; however, they will require multiple reading sessions so do not expect any of these to be read in one or two nights. These books, especially the books in the Stormlight Archive, are LONG and so I recommend reading/listening to the audio book version for more convenience. For instance, I am currently reading the 6th book in the Mistborn series and I listen to the audiobook while I drive, do chores, walk to class, eat, or play Minecraft. These listening sessions are normally short, ranging from 20 minutes to 2 hours, however, over time this accumulates, so a long book like The Way of Kings (the first in the Stormlight Archive, which is 45.5 hours long) can be read in a few weeks.</p>
-                   <figure>
-                        <img>
-                        <figcaption>An ai image of guy listening to audiobooks while driving.</figcaption>
-                   </figure>
-                   <figure>
-                        <img>
-                        <figcaption>Open source picture depicting a long book, from <a href="https://www.istockphoto.com/photos/huge-book">website</a></figcaption>
+                <div class="divider"></div>
+                <div>
+                   <p>These books can be read at any time; however, they will require multiple reading sessions so do not expect any of these to be read in one or two nights. These books, especially the books in the <i>Stormlight Archive</i>, are LONG and so I recommend reading/listening to the audio book version for more convenience. For instance, I am currently reading the 6th book in the <i>Mistborn</i> series and I listen to the audiobook while I drive, do chores, walk to class, eat, or play Minecraft. These listening sessions are normally short, ranging from 20 minutes to 2 hours, however, over time this accumulates, so a long book like <i>The Way of Kings</i> (the first in the <i>Stormlight Archive</i>, which is 45.5 hours long) can be read in a few weeks.</p>
+                   <div class="figGroup">
+                    <figure class="figStyle">
+                            <img src="images/When1.png">
+                            <figcaption>An ai image of guy listening to audiobooks while driving.</figcaption>
                     </figure>
+                    <figure class="figStyle">
+                            <img src="images/When2.png">
+                            <figcaption>Open source picture depicting a long book, from <a href="https://www.istockphoto.com/photos/huge-book">website</a></figcaption>
+                        </figure>
+                    </div>
                 </div>
             </section>
-            <section>
+            <section id="where" class="content">
                 <h2>Where</h2>
-                <div class="content">
-                   <p>Considering how complex and interconnected these books are, there is some contention within the fan community over the order to read the books, what series to read first, and if you need to read the novellas, short stories, and independent books. Personally I recommend reading the Mistborn series first because it is much shorter and more accessible to new readers; however, the Stormlight Archive is Sanderson’s magnum opus. As for the supporting books, novellas, and short stories, they are not needed to enjoy these series (I haven’t read any of them), but from what I heard, they enhance the story and contain many references to other series. Both of the major series contain halfway points, Mistborn is split into era 1 and era 2 which can be technically read in either order but era 1 is highly recommended, and the Stormlight Archive is technically split into two, however Sanderson just finished the arc 1 with the fivith book, so arc 2 is years away. </p>
-                   <figure>
-                        <img>
-                        <figcaption>Photo of my personal copies of Mistborn era 1 and the Stormlight Archive</figcaption>
-                   </figure>
-                   <figure>
-                        <img>
-                        <figcaption>An ai image emulating the order to read the books</figcaption>
+                <div class="divider"></div>
+                <div>
+                   <p>Considering how complex and interconnected these books are, there is some contention within the fan community over the order to read the books, what series to read first, and if you need to read the novellas, short stories, and independent books. Personally I recommend reading the <i>Mistborn</i> series first because it is much shorter and more accessible to new readers; however, the <i>Stormlight Archive</i> is Sanderson’s magnum opus. As for the supporting books, novellas, and short stories, they are not needed to enjoy these series (I haven’t read any of them), but from what I heard, they enhance the story and contain many references to other series. Both of the major series contain halfway points, <i>Mistborn</i> is split into era 1 and era 2 which can be technically read in either order but era 1 is highly recommended, and the <i>Stormlight Archive</i> is technically split into two, however Sanderson just finished the arc 1 with the 5th book, so arc 2 is years away. </p>
+                   <div class="figGroup">
+                    <figure class="figStyle">
+                            <img src="images/Where1.png">
+                            <figcaption>Photo of my personal copies of <i>Mistborn</i> era 1 and the <i>Stormlight Archive</i></figcaption>
                     </figure>
+                    <figure class="figStyle">
+                            <img src="images/Where2.png">
+                            <figcaption>An ai image emulating the order to read the books</figcaption>
+                        </figure>
+                    </div>
                 </div>
             </section>
-            <section>
+            <section id="who" class="content">
                 <h2>Who</h2>
-                <div class="content">
-                   <p>Here are short descriptions of each of the predominant characters in these series:</p>
-                   <h3>Stormlight Archive:</h3>
-                   <p class="list">Shallan - The daughter of a noble family sets out to convince the smartest woman in the world to take her as her protégé. However, she secretly plans to trick and steal from the women to pay off her family’s crippling debt.</p>
-                   <p class="list">Dalinar - The most influential noble of the strongest kingdom on Roshar, he seeks to navigate the political strife, as well as protect his kingdom and nephew (the king). He has been having visions of calamities and warnings of a coming danger, however, he is unsure if he is going senile, insane, or are they from a higher power.</p>
-                   <p class="list">Kaladin - A commoner who has been forced into a life of misery and slavery. He is sold to the frontlines of a war to be disposable labor, however, he tries his best to hold onto his humanity in this horific war. Kaladin isn’t alone however, a spen has been following him around, a wisp/ghostly manifestation of wind. These normally have low to no intelligence; the most they can do is play small pranks, however, this one is following him around and can speak.</p>
-                   <h3>Mistborn:</h3>
-                   <p class="list">Kelsier - A notorious thief who hates, steals, and kills the nobility. He has returned from captivity with revenge on his mind and supernatural powers to reach his climbing ambitions.</p>
-                   <p class="list">Vin - An orphaned street kid who is trying her best to survive in the criminal underworld. After her brother abandons her with his debts, she is forced to work in a thieving crew. Despite her being poor, abused, and alone, she survives using her wits, acting skills, and a mysterious power.</p>
-                   <figure>
-                        <img>
-                        <figcaption>Photo of my personal copy of the Mistborn boardgame, depicting Vin</figcaption>
-                   </figure>
+                <div class="divider"></div>
+                <div>
+                    <p>Here are short descriptions of each of the predominant characters in these series:</p>
+                    <h3>Stormlight Archive:</h3>
+                    <ul>
+                        <li>Shallan - The daughter of a noble family sets out to convince the smartest woman in the world to take her as her protégé. However, she secretly plans to trick and steal from the women to pay off her family’s crippling debt.</li>
+                        <li>Dalinar - The most influential noble of the strongest kingdom on Roshar, he seeks to navigate the political strife, as well as protect his kingdom and nephew (the king). He has been having visions of calamities and warnings of a coming danger, however, he is unsure if he is going senile, insane, or are they from a higher power.</li>
+                        <li>Kaladin - A commoner who has been forced into a life of misery and slavery. He is sold to the frontlines of a war to be disposable labor, however, he tries his best to hold onto his humanity in this horific war. Kaladin isn’t alone however, a spen has been following him around, a wisp/ghostly manifestation of wind. These normally have low to no intelligence; the most they can do is play small pranks, however, this one is following him around and can speak.</li>
+                    </ul>
+                    <h3>Mistborn:</h3>
+                    <ul>
+                        <li>Kelsier - A notorious thief who hates, steals, and kills the nobility. He has returned from captivity with revenge on his mind and supernatural powers to reach his climbing ambitions.</li>
+                        <li>Vin - An orphaned street kid who is trying her best to survive in the criminal underworld. After her brother abandons her with his debts, she is forced to work in a thieving crew. Despite her being poor, abused, and alone, she survives using her wits, acting skills, and a mysterious power.</li>
+                    </ul>
+                    <div class="figGroup">
+                        <figure class="figStyle">
+                                <img src="images/Who.png">
+                                <figcaption>Photo of my personal copy of the <i>Mistborn</i> boardgame, depicting Vin</figcaption>
+                        </figure>
+                    </div>
                 </div>
             </section>
         </main>
         <footer>
             <h2>Navbar</h2>
-            <div class="divider"></div>
             <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
-            <div>
+            <!-- <div>
                 <a href = "/">Home Page</a>
             </div>
             <div>
                 <a href = "../">3135 Page</a>
-            </div>
+            </div> -->
+            <address>
+                <a href = "/">Home Page</a><br />
+                <a href = "../">3135 Page</a><br />
+            </address>
         </footer>
     </body>
+    
 </html>
