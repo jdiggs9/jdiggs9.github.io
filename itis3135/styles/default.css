@@ -49,6 +49,15 @@ p {
 ul {
     color: #423f33;
     font-size: 18px;
+    text-align: left;
+}
+
+section {
+    text-align: left;
+}
+
+ol {
+    text-align: left;
 }
 
 .sublist {
@@ -64,6 +73,7 @@ main {
     padding: 20px;
     box-sizing: border-box;
     color: #423f33;
+    text-align: center;
 }
 
 footer {
@@ -150,6 +160,7 @@ input[type="submit"], input[type="reset"], button {
 input[type="submit"]:hover, input[type="reset"]:hover, button:hover {
     background-color: #5b5246;
 }
+
 
 
 /* Large screens (desktops) */
