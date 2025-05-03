@@ -17,7 +17,7 @@ document.getElementById("introForm").addEventListener("submit", function(e){
         <p><strong>Academic Background:</strong> ${document.getElementById("academicBackground").value}</p>
         <p><strong>Web Development Background:</strong> ${document.getElementById("webDevBackground").value}</p>
         <p><strong>Primary Platform:</strong> ${document.getElementById("platform").value}</p>
-        <p><strong>Courses:</strong> ${Array.from(document.querySelectorAll(".course")).map(input => input.value).join(", ")}</p>
+        <p><strong>Courses:</strong> ${Array.from(document.querySelectorAll(".course")).map((input) => input.value).join(", ")}</p>
         <p><strong>Funny Thing:</strong> ${document.getElementById("funnyThing").value}</p>
         <p><strong>Anything Else:</strong> ${document.getElementById("anythingElse").value}</p>
         <p><a href="byo_intro.html">Reset and do it again</a></p>
