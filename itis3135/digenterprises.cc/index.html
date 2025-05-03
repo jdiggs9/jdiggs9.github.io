@@ -97,6 +97,27 @@ img {
 .contact-a {
     color:#c46f5e;
 }
+.fancy-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.fancy-list li {
+    position: relative;
+    padding-left: 50px;
+    margin-bottom: 12px;
+    color: #423f33;
+    font-size: 18px;
+}
+
+.fancy-list li::before {
+    content: "▪️";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 20px;
+    padding-left: 30px;
+}
 
         </style>
         <!--https://coolors.co/3a405a-f9dec9-99b2dd-e9afa3-685044-->
@@ -116,7 +137,7 @@ img {
                 presence. Whether launching a startup or refreshing an established 
                 brand, we’re passionate about building websites that connect, engage, 
                 and inspire.</p>
-            <ul>
+            <ul class="fancy-list">
                 <li><b>Custom, Handcrafted Designs</b> - Every website is uniquely built from the ground up</li>
                 <li><b>Lightning-Fast Turnaround</b> - Quick, efficient delivery without sacrificing quality</li>
                 <li><b>SEO-Optimized from Day One</b> - We bake best practices right into every build</li>
