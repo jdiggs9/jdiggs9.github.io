@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Josh Diggs's Slideshow || ITIS3135</title>
+  <link rel="stylesheet" href="styles/default.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script defer src="scripts/slideshow.js"></script>
+</head>
+<body>
+  <header>
+    <div data-include="components/header.html"></div>
+  </header>
+  <main>
+    <h2 class="subtitle">Slideshow</h2>
+    <figure id="slideshow">
+      <img id="slide-img" src="images/slideshow/jellybeans.jpg" alt="Jellybeans">
+      <figcaption id="slide-caption">J for Jellybeans</figcaption>
+    </figure>
+    <button id="prev">Previous</button>
+    <button id="next">Next</button>
+    
+  </main>
+  <footer>
+    <div data-include="components/footer.html"></div>
+  </footer>
+  <script src="scripts/HTMLInclude.js"></script>
+</body>
+</html>
