@@ -38,6 +38,9 @@ p {
 ul {
     color:#423f33;
 }
+dl {
+    margin: 5px;
+}
 main {
     background-color: #f8f6ee;
     align-items: center;
