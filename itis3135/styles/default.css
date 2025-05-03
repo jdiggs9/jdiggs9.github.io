@@ -63,6 +63,7 @@ main {
     margin: 30px auto;
     padding: 20px;
     box-sizing: border-box;
+    color: #423f33;
 }
 
 footer {
@@ -99,6 +100,55 @@ figcaption {
     max-width: 300px;
     font-size: 12px;
     color: #423f33;
+}
+table {
+    width: 95%;
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+
+th, td {
+    border: 1px solid #322c35;
+    padding: 8px;
+    text-align: center;
+}
+
+thead tr {
+    background-color: #322c35;
+    color: #f8edbe;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f8f6ee;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #ded9cb;
+}
+.tablefig {
+    text-align: center;
+    font-size: 18px;
+    margin: 10px auto;
+    padding: auto;
+    color: #322c35;
+}
+
+input, textarea, button {
+    margin: 5px;
+    padding: 5px;
+    font-size: 16px;
+}
+
+input[type="submit"], input[type="reset"], button {
+    background-color: #423f33;
+    color: #f8edbe;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover, input[type="reset"]:hover, button:hover {
+    background-color: #5b5246;
 }
 
 /* Large screens (desktops) */

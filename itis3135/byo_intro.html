@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BYO Intro || ITIS3135</title>
+    <link rel="stylesheet" href="styles/default.css">
+</head>
+<body>
+    <header>
+        <div data-include="components/header.html"></div>
+    </header>
+
+    <main>
+        <h2 class="subtitle">BYO Intro</h2>
+        <h3>Time to BYO Intro page, fill out the form below!</h3>
+
+        <form id="introForm">
+            <label>Name: <input type="text" id="name" required></label><br>
+            <label>Mascot: <input type="text" id="mascot" required></label><br>
+            <label>Image: <input type="file" id="image" accept=".jpg, .jpeg, .png" required></label><br>
+            <label>Image Caption: <input type="text" id="caption" required></label><br>
+            <label>Personal Background: <input type="text" id="personalBackground" required></label><br>
+            <label>Professional Background: <input type="text" id="professionalBackground" required></label><br>
+            <label>Academic Background: <input type="text" id="academicBackground" required></label><br>
+            <label>Background in Web Dev: <input type="text" id="webDevBackground" required></label><br>
+            <label>Primary Computer Platform: <input type="text" id="platform" required></label><br>
+            <div id="coursesContainer">
+                <label>Courses Currently Taking:</label>
+                <button type="button" onclick="addCourse()">Add Course</button>
+            </div><br>
+            <label>Funny Thing: <input type="text" id="funnyThing"></label><br>
+            <label>Anything Else: <input type="text" id="anythingElse"></label><br>
+            <label>
+                <input type="checkbox" id="agreement" required>
+                I understand this isn't password protected and will not post anything private.
+            </label><br><br>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </form>
+
+        <div id="result"></div>
+
+    </main>
+
+    <footer>
+        <div data-include="components/footer.html"></div>
+    </footer>
+
+    <script src="scripts/HTMLInclude.js"></script>
+    <script src="scripts/survey.js"></script>
+</body>
+</html>

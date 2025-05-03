@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Josh Diggs's Jovial Mechanical Dodo || ITIS3135 Tables</title>
+    <link rel="stylesheet" href="styles/default.css">
+    
+</head>
+<body>
+    <header>
+        <div data-include="components/header.html"></div>
+    </header>
+
+    <main>
+        <h2 class="subtitle">Tables Assignment</h2>
+
+        <h3>My Tabular Data</h3>
+        <ol>
+            <li>Alfred Dodo - adodo@jovialdodo.com</li>
+            <li>Sally Feathers - sfeathers@gmail.com</li>
+            <li>Rick Wingston - rickw@yahoo.com</li>
+            <li>Barry Beak - barryb@jovialdodo.com</li>
+            <li>Gloria Flap - gflap@gmail.com</li>
+            <li>Clara Crest - clara.crest@yahoo.com</li>
+            <li>Pauline Plumage - p.plumage@jovialdodo.com</li>
+        </ol>
+
+        <h3>Employee Data in Simple Table</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Years of Service</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Alfred Dodo</td><td>adodo@jovialdodo.com</td><td>10</td></tr>
+                <tr><td>Sally Feathers</td><td>sfeathers@gmail.com</td><td>5</td></tr>
+                <tr><td>Rick Wingston</td><td>rickw@yahoo.com</td><td>12</td></tr>
+                <tr><td>Barry Beak</td><td>barryb@jovialdodo.com</td><td>8</td></tr>
+                <tr><td>Gloria Flap</td><td>gflap@gmail.com</td><td>3</td></tr>
+                <tr><td>Clara Crest</td><td>clara.crest@yahoo.com</td><td>7</td></tr>
+                <tr><td>Pauline Plumage</td><td>p.plumage@jovialdodo.com</td><td>15</td></tr>
+            </tbody>
+        </table>
+
+        <h3>Employee Data in Complex Table</h3>
+        <figure>
+            <figcaption class="tablefig">Employee Information for Jovial Dodo, Inc.</figcaption>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Department</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Years of Service</th>
+                        <th>Monthly Salary</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="2">Management</td>
+                        <td>Alfred Dodo</td>
+                        <td>adodo@jovialdodo.com</td>
+                        <td>10</td>
+                        <td>$9,000</td>
+                    </tr>
+                    <tr>
+                        <td>Sally Feathers</td>
+                        <td>sfeathers@gmail.com</td>
+                        <td>5</td>
+                        <td>$5,000</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3">Marketing</td>
+                        <td>Rick Wingston</td>
+                        <td>rickw@yahoo.com</td>
+                        <td>12</td>
+                        <td>$6,500</td>
+                    </tr>
+                    <tr>
+                        <td>Barry Beak</td>
+                        <td>barryb@jovialdodo.com</td>
+                        <td>8</td>
+                        <td>$5,500</td>
+                    </tr>
+                    <tr>
+                        <td>Gloria Flap</td>
+                        <td>gflap@gmail.com</td>
+                        <td>3</td>
+                        <td>$4,500</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Support</td>
+                        <td>Clara Crest</td>
+                        <td>clara.crest@yahoo.com</td>
+                        <td>7</td>
+                        <td>$4,000</td>
+                    </tr>
+                    <tr>
+                        <td>Pauline Plumage</td>
+                        <td>p.plumage@jovialdodo.com</td>
+                        <td>15</td>
+                        <td>$7,500</td>
+                    </tr>
+                    <tr>
+                        <th colspan="3">Total Years of Service</th>
+                        <td>60</td>
+                        <td>$42,000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </figure>
+
+    </main>
+
+    <footer>
+        <div data-include="components/footer.html"></div>
+    </footer>
+
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <script src="scripts/HTMLInclude.js"></script>
+</body>
+</html>
